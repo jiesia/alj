@@ -1,0 +1,4 @@
+<view class="recommend">
+  推荐
+  <active-card />
+</view>

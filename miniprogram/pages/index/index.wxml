@@ -1,0 +1,42 @@
+<!--pages/index/index.wxml-->
+<view class="index">
+  <!-- 标题栏 -->
+  <view
+    class="index-title"
+    style="padding-top: {{statusBarHeight}}px; height: {{titleBarHeight}}px;"
+  >
+    <view class="index-title-side">拍照</view>
+    <view class="index-title-tab">
+      <view
+        wx:for="{{tabs}}"
+        wx:key="{{item.key}}"
+        class="index-title-tab-item {{item.key === activeTab ? 'active' : ''}}"
+        data-item="{{item}}"
+        bindtap="toggleTab"
+      >{{ item.title }}</view>
+      <view
+        class="index-title-tab-bar" 
+        style="left: calc({{3.4 * activeTab + 1}}rem);"
+      ></view>
+    </view>
+  </view>
+  <!-- 关注、推荐、同城 -->
+  <view
+    class="index-container"
+    style="z-index: {{activeTab === 0 ? 2 : 1}}; padding-top: {{statusBarHeight + titleBarHeight}}px;"
+  >
+    <attention />
+  </view>
+  <view
+    class="index-container"
+    style="z-index: {{activeTab === 1 ? 2 : 1}}; padding-top: {{statusBarHeight + titleBarHeight}}px;"
+  >
+    <recommend />
+  </view>
+  <view
+    class="index-container"
+    style="z-index: {{activeTab === 2 ? 2 : 1}}; padding-top: {{statusBarHeight + titleBarHeight}}px;"
+  >
+    <city />
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "attention": "./components/attention/attention",
+    "recommend": "./components/recommend/recommend",
+    "city": "./components/city/city"
+  }
+}

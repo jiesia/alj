@@ -1,0 +1,58 @@
+.index {
+
+  &-title {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 10;
+
+    &-side {
+      left: 0;
+      width: 44px;
+      height: 44px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-tab {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: stretch;
+      position: relative;
+
+      &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.4rem;
+
+        &.active {
+          font-size: 36rpx;
+        }
+      }
+
+      &-bar {
+        position: absolute;
+        height: 8rpx;
+        border-radius: 4rpx;
+        width: 1.4rem;
+        background-color: #f75f78;
+        bottom: 6rpx;
+        transition: .2s;
+      }
+    }
+  }
+
+  &-container {
+    position: absolute;
+    background-color: #ffffff;
+    height: 100%;
+    padding: 0 20rpx;
+  }
+}
